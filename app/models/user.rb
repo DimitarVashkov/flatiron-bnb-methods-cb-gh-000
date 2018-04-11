@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   has_many :reviews, :foreign_key => 'guest_id'
 
   has_many :trip_listings, through: :listings
-  has_many :hosts, class_name: 'User'
+  has_many :hosts, through: :trip_listings
+
+  
   has_many :guests, class_name: 'User'
 
 end
