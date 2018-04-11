@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   has_many :hosts, through: :trip_listings, foreign_key: 'host_id'
 
 
-  has_many :guests, class_name: 'User'
+  has_many :guests, through: :reservations
 
 end
