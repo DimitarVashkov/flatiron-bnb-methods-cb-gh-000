@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :trip_listings, through: :listings
   has_many :hosts, through: :trip_listings
 
-  
+
   has_many :guests, class_name: 'User'
 
 end
